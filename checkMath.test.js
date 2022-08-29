@@ -28,4 +28,8 @@ describe ('checkMath', () => {
   it('returns for negative numbers', () => {
     expect(checkMath("2 - 6")).toStrictEqual(["2 - 6", -4.0])
   })
+
+  it('returns for floats numbers', () => {
+    expect(checkMath("2.57 + 1.2")).toStrictEqual(["2.57 + 1.2", 3.77])
+  })
 })
