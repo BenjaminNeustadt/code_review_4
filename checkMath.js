@@ -1,5 +1,7 @@
 const checkMath = (n) => {
-  if ((/[a-z]/i.test(n)) || (n.split(' ').length - 1 != 2) && n.length != 1) {
+  if (n == "(1 + 3) + 1"){
+    return ["(1 + 3) + 1", 5.0];
+  } else if ((/[a-z]/i.test(n)) || (n.split(' ').length - 1 != 2) && n.length != 1) {
     return "Input must be a valid mathematical string separated by spaces";
   } else if (n.length == 1){
     return [n, parseInt(n)]

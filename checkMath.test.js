@@ -65,8 +65,12 @@ describe ('checkMath', () => {
     expect(checkMath("1+1")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  it('returns when expression inside paranthesis)', () => {
+  it('returns when expression inside paranthesis', () => {
     expect(checkMath("(1 + 1)")).toStrictEqual(["(1 + 1)", 2.0])
+  })
+
+  it('returns for complew expressions', () => {
+    expect(checkMath("(1 + 3) + 1")).toStrictEqual(["(1 + 3) + 1", 5.0])
   })
 
   
