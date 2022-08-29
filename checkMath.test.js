@@ -32,4 +32,8 @@ describe ('checkMath', () => {
   it('returns for floats numbers', () => {
     expect(checkMath("2.57 + 1.2")).toStrictEqual(["2.57 + 1.2", 3.77])
   })
+
+  it('returns single number for 0', () => {
+    expect(checkMath("0")).toStrictEqual(["0", 0.0])
+  })
 })
