@@ -48,4 +48,8 @@ describe ('checkMath', () => {
   it('throws error if not valid format (numerous, longer)', () => {
     expect(checkMath("hello + goodbye")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
+
+  it('throws error if not valid format (first character number, second letter)', () => {
+    expect(checkMath("1 + a")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
+  })
 })

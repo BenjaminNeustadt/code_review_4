@@ -1,5 +1,5 @@
 const checkMath = (n) => {
-  if (!parseInt(n[0]) && n != "0"){
+  if (/[a-z]/i.test(n)){
     return "Input must be a valid mathematical string separated by spaces";
   } else if (n.length == 1){
     return [n, parseInt(n)]
