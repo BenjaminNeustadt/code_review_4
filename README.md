@@ -19,6 +19,7 @@ Input / ouput
 INPUT
 "1"
 "1 + 1"
+"1 + 2"
 "2 - 1"
 "50 * 50"
 "25 / 5"
@@ -29,6 +30,8 @@ INPUT
 OUTPUT
 ["1", 1]
 ["1 + 1", 2.0]
+["1 + 2", 3.0]
+
 
 
 Format will always be consistent

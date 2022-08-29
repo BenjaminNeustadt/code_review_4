@@ -1,8 +1,9 @@
 const checkMath = (n) => {
-  if (n == "1"){
-    return ["1", 1.0];
+  if (n.length == 1) {
+    return [n, parseInt(n)]
   } else {
-    return ["1 + 1", 2.0];
+    const result = [n, ((parseInt(n[0])) + (parseInt(n[4])))];
+    return result;
   }
 }
 
