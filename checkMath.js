@@ -2,7 +2,7 @@ const checkMath = (n) => {
   if (n.length == 1) {
     return [n, parseInt(n)]
   } else {
-    const result = [n, (Math.round(eval(n) * 100) / 100)];
+    const result = [n, (parseFloat(eval(n).toFixed(2)))];
     return result;
   }
 }
