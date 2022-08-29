@@ -7,8 +7,7 @@ const checkMath = (n) => {
   if (has_letters || (incorrect_spacing) && !one_chars){
     return "Input must be a valid mathematical string separated by spaces";
   } else {
-    const result = [n, parseFloat(eval(n).toFixed(2))];
-    return result;
+    return [n, parseFloat(eval(n).toFixed(2))];
   }
 }
 
