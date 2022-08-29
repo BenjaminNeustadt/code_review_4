@@ -1,6 +1,8 @@
 const checkMath = (n) => {
-  const incorrect_spacing = (n.split(' ').length - 1) % 2 == 1 || !(/\s/.test(n))
-  if ((/[a-z]/i.test(n)) || (incorrect_spacing) && n.length != 1){
+  const has_space = (/\s/.test(n))
+  const has_letters = (/[a-z]/i.test(n))
+  const incorrect_spacing = (n.split(' ').length - 1) % 2 == 1 || !(has_space)
+  if (has_letters || (incorrect_spacing) && n.length != 1){
     return "Input must be a valid mathematical string separated by spaces";
   } else if (n.length == 1){
     return [n, parseInt(n)]
@@ -11,6 +13,3 @@ const checkMath = (n) => {
 }
 
 module.exports = checkMath;
-
-
-// this incorrect_spacing is not catching the 1 +3
