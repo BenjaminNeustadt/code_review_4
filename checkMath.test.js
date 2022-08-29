@@ -16,4 +16,12 @@ describe ('checkMath', () => {
   it('returns for substraction', () => {
     expect(checkMath("2 - 1")).toStrictEqual(["2 - 1", 1.0])
   })
+
+  it('returns for multiplication', () => {
+    expect(checkMath("2 * 1")).toStrictEqual(["2 * 1", 2.0])
+  })
+
+  it('returns for multiplication', () => {
+    expect(checkMath("2 * 6")).toStrictEqual(["2 * 6", 12.0])
+  })
 })
