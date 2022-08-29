@@ -17,11 +17,15 @@ describe ('checkMath', () => {
     expect(checkMath("2 - 1")).toStrictEqual(["2 - 1", 1.0])
   })
 
-  it('returns for multiplication', () => {
+  it('returns for multiplication 1', () => {
     expect(checkMath("2 * 1")).toStrictEqual(["2 * 1", 2.0])
   })
 
-  it('returns for multiplication', () => {
+  it('returns for multiplication 6', () => {
     expect(checkMath("2 * 6")).toStrictEqual(["2 * 6", 12.0])
+  })
+
+  it('returns for negative numbers', () => {
+    expect(checkMath("2 - 6")).toStrictEqual(["2 - 6", -4.0])
   })
 })
