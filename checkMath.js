@@ -6,8 +6,6 @@ const checkMath = (n) => {
   const incorrect_spacing = uneven_space || !(has_space)
   if (has_letters || (incorrect_spacing) && !one_chars){
     return "Input must be a valid mathematical string separated by spaces";
-  } else if (n.length == 1){
-    return [n, parseInt(n)]
   } else {
     const result = [n, parseFloat(eval(n).toFixed(2))];
     return result;
