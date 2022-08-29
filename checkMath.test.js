@@ -87,7 +87,7 @@ describe ('checkMath', () => {
     expect(checkMath("(1 +3)")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('returns for complex expressions', () => {
+  it('returns for complex expressions', () => {
     expect(checkMath("((1 + 3)+ 4) * 3")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
