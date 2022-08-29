@@ -40,7 +40,7 @@ describe ('checkMath', () => {
   it('throws error if not valid format (single)', () => {
     expect(checkMath("a")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
-  
+  // Throwing Errors
   it('throws error if not valid format (numerous)', () => {
     expect(checkMath("a + b")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
@@ -51,5 +51,9 @@ describe ('checkMath', () => {
 
   it('throws error if not valid format (first character number, second letter)', () => {
     expect(checkMath("1 + a")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
+  })
+
+  it('throws error if not valid format (not correct spacing)', () => {
+    expect(checkMath("1+1")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 })

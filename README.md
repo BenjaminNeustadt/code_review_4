@@ -33,7 +33,7 @@ Mixing string expressions:
 "Hello1 + 1"
 "Hello, 1 + 1 , 1+1"
 "Hello, 1 + 1 2 + 2 " => Does this still output stuff?
-"Hello, 1 + 1, 2 + 2 " => Does this still output stuff?
+"1 + 1, 2 + 2 " => Does this still output stuff?
 "2a + 3a" => what about this?
 
 
