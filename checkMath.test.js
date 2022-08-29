@@ -36,4 +36,8 @@ describe ('checkMath', () => {
   it('returns single number for 0', () => {
     expect(checkMath("0")).toStrictEqual(["0", 0.0])
   })
+
+  it('throws error if not valid format', () => {
+    expect(checkMath("a")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
+  })
 })
