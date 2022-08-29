@@ -69,10 +69,12 @@ describe ('checkMath', () => {
     expect(checkMath("(1 + 1)")).toStrictEqual(["(1 + 1)", 2.0])
   })
 
-  it('returns for complew expressions', () => {
+  it('returns for complex expressions', () => {
     expect(checkMath("(1 + 3) + 1")).toStrictEqual(["(1 + 3) + 1", 5.0])
   })
 
+  it('returns for complex expressions', () => {
+    expect(checkMath("(1 + 3) * 4")).toStrictEqual(["(1 + 3) * 4", 16.0])
+  })
   
-
 })
