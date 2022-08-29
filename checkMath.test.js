@@ -76,5 +76,10 @@ describe ('checkMath', () => {
   it('returns for complex expressions', () => {
     expect(checkMath("(1 + 3) * 4")).toStrictEqual(["(1 + 3) * 4", 16.0])
   })
+
+  // edge cases
+  it('returns for complex expressions', () => {
+    expect(checkMath("((1 + 3) + 4) * 3")).toStrictEqual(["((1 + 3) + 4) * 3", 24.0])
+  })
   
 })
