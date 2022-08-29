@@ -44,7 +44,25 @@ describe ('checkMath', () => {
   it('returns single number for 0', () => {
     expect(checkMath("0")).toStrictEqual(["0", 0.0])
   })
+
+  it('returns when expression inside paranthesis', () => {
+    expect(checkMath("(1 + 1)")).toStrictEqual(["(1 + 1)", 2.0])
+  })
+
+  it('returns for complex expressions', () => {
+    expect(checkMath("(1 + 3) + 1")).toStrictEqual(["(1 + 3) + 1", 5.0])
+  })
+
+  it('returns for complex expressions', () => {
+    expect(checkMath("(1 + 3) * 4")).toStrictEqual(["(1 + 3) * 4", 16.0])
+  })
+  // edge cases
+  it('returns for complex expressions', () => {
+    expect(checkMath("((1 + 3) + 4) * 3")).toStrictEqual(["((1 + 3) + 4) * 3", 24.0])
+  })
+
   // Throwing Errors
+  // LETTERS
   it('throws error if not valid format (single)', () => {
     expect(checkMath("a")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
@@ -64,22 +82,20 @@ describe ('checkMath', () => {
   it('throws error if not valid format (not correct spacing)', () => {
     expect(checkMath("1+1")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
-
-  it('returns when expression inside paranthesis', () => {
-    expect(checkMath("(1 + 1)")).toStrictEqual(["(1 + 1)", 2.0])
-  })
-
+  
   it('returns for complex expressions', () => {
-    expect(checkMath("(1 + 3) + 1")).toStrictEqual(["(1 + 3) + 1", 5.0])
+    expect(checkMath("(1 +3)")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  it('returns for complex expressions', () => {
-    expect(checkMath("(1 + 3) * 4")).toStrictEqual(["(1 + 3) * 4", 16.0])
+  xit('returns for complex expressions', () => {
+    expect(checkMath("((1 + 3)+ 4) * 3")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  // edge cases
-  it('returns for complex expressions', () => {
-    expect(checkMath("((1 + 3) + 4) * 3")).toStrictEqual(["((1 + 3) + 4) * 3", 24.0])
-  })
+
+
+
+  // it('last edge case for invalid symbols', () => {
+  //   expect(checkMath("(( 1+ 4)")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
+  // })
   
 })
