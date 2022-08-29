@@ -27,6 +27,13 @@ INPUT
 "2.57 + 1.2"
 "0"
 
+didn't ask about the following:
+Mixing string expressions:
+"Hello kitty 1 + 1"
+"Hello1 + 1"
+"Hello, 1 + 1 , 1+1"
+"Hello, 1 + 1 2 + 2 " => Does this still output stuff?
+
 OUTPUT
 ["1", 1]
 ["1 + 1", 2.0]
@@ -50,3 +57,7 @@ one function
 checkMath(argument)
 
 
+Mo gives advice on syntax to interact with elements of anything:
+"abc"[0] => "a"
+we use that and parseInt(n) or parseFloat(n) to add them,
+since we are currently only adding.

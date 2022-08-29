@@ -13,4 +13,7 @@ describe ('checkMath', () => {
     expect(checkMath("2 + 2")).toStrictEqual(["2 + 2", 4.0])
   })
 
+  it('returns for substraction', () => {
+    expect(checkMath("2 - 1")).toStrictEqual(["2 - 1", 1.0])
+  })
 })
