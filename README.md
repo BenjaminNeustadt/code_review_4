@@ -6,10 +6,10 @@
 "Works for a company that makes academic papers easier to read.
 Product does this by scanning through maths papers,
 looking for mathematical expressions.
-It then exatracts those sums, as strings.
+It then extracts those sums, as strings.
 Extracted sum strings then evaluated.
-Evaluated result outputted, 
-along with the extracted sum string." 
+Evaluated result outputted,
+along with the extracted sum string."
 
 Build a prototype that evaluates some strings given (with one or two terms).
 
