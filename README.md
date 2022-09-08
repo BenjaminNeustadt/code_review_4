@@ -1,5 +1,12 @@
 # Code Review (4)
 
+An exercise done during a code review. The observation exercise lasts
+one hour, with between 30-minutes to do the TDD.
+
+This README contains everything from the information gathering stage,
+where the descriptive of the program to be written is layed out by the
+reviewer followed by questions of the reviewee to identify edge-cases.
+
 ---
 ### Statement:
 
@@ -7,7 +14,7 @@
 Product does this by scanning through maths papers,
 looking for mathematical expressions.
 It then extracts those sums, as strings.
-Extracted sum strings then evaluated.
+Extracted "sum strings" are then evaluated.
 Evaluated result outputted,
 along with the extracted sum string."
 

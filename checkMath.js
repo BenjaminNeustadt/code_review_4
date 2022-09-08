@@ -7,9 +7,9 @@ const valid = (text) => {
   return no_letter && correct_spacing
 }
 
-const checkMath = (n) => {
-  if (valid(n)) {
-    return [n, parseFloat(eval(n).toFixed(2))];
+const checkMath = (number) => {
+  if (valid(number)) {
+    return [number, parseFloat(eval(number).toFixed(2))];
   } else {
     return "Input must be a valid mathematical string separated by spaces";
   }
