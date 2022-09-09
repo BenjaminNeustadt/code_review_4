@@ -105,5 +105,12 @@ describe ('checkMath', () => {
     expect(checkMath("((1 + 3)+ 4) * 3")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
+  it('returns for digit inside parenthesis', () => {
+    expect(checkMath("((1 + (3) + 4) * 3)")).toStrictEqual(["((1 + (3) + 4) * 3)", 24])
+  })
+
+  it('returns for digits inside parenthesis', () => {
+    expect(checkMath("((1 + (33) + 4) * 3)")).toStrictEqual(["((1 + (33) + 4) * 3)", 114])
+  })
 
 })
