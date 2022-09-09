@@ -69,40 +69,41 @@ describe ('checkMath', () => {
   // Throwing Errors
   // LETTERS
 
-  xit('throws error if not correct spacing', () => {
+  it('throws error if not correct spacing', () => {
     expect(checkMath("1+1")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('throws error if contains one letter', () => {
+  it('throws error if contains one letter', () => {
     expect(checkMath("a")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('throws error if not valid format (numerous)', () => {
+  it('throws error if not valid format (numerous)', () => {
     expect(checkMath("a + b")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('throws error if not valid format (numerous, longer)', () => {
+  it('throws error if not valid format (numerous, longer)', () => {
     expect(checkMath("hello + goodbye")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('throws error if not valid format (first character number, second letter)', () => {
+  it('throws error if not valid format (first character number, second letter)', () => {
     expect(checkMath("1 + a")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('throws error for malformed complex expressions', () => {
+  it('throws error for malformed complex expressions', () => {
     expect(checkMath("(1 +3)")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('throws error for bad spacing', () => {
-    expect(checkMath("((1 + 3)+ 4) * 3")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
-  })
-
-  xit('last edge case for invalid symbols', () => {
+  it('last edge case for invalid symbols', () => {
     expect(checkMath("(( 1+ 4)")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
   })
 
-  xit('returns for negative numbers', () => {
-    expect(checkMath("-2 - 6")).toStrictEqual(["2 - 6", -8.0])
+  it('returns for negative numbers', () => {
+    expect(checkMath("-2 - 6")).toStrictEqual(["-2 - 6", -8.0])
   })
+
+  it('throws error for bad spacing in complex expressions', () => {
+    expect(checkMath("((1 + 3)+ 4) * 3")).toStrictEqual("Input must be a valid mathematical string separated by spaces")
+  })
+
 
 })
