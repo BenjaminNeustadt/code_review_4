@@ -3,7 +3,6 @@ const valid = (text) => {
   var two_spaces = /\d+\s.\s\d+/.test(text) || /\(\d+\)\s.\s\d+/.test(text)
   var correct_spacing = two_spaces || single_character
   var no_letter = (/[^a-z]/i.test(text))
-  //var bad_spacing = /\../.test(text)
   var joined_symbols = /[)+-\/][(+-\/]/.test(text)
 
   return no_letter && correct_spacing && !joined_symbols
