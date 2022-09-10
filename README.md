@@ -1,22 +1,29 @@
 # Code Review (4)
 
-A code review.
+A code review.<br>
 The observation exercise lasts one hour,
-with around 30-minutes to do the TDD.
+with around 30-40 minutes to do the TDD.
 
-This program takes a string and identifies whether a mathematical expression
-is given. It returns that expression and its result, as two elements of an
+This program takes a string to identify whether a syntactically valid mathematical expression
+is given. It returns that expression and its result; as two elements of an
 array.
 
 :information_source:
-
 Originally, the code involved one method. However, after the
 introduction of regular expressions to verify the validity of the
-inputted mathematical expressions, a second method was created above
+inputted mathematical expressions, a second method was created
 that checks whether the input adheres to the criteria.
 This extraction was in the effort to respect the single responsibility principle.
 
-This README contains everything from the information gathering stage,
+This is an interesting exercise as it requires us to consider how a
+linter is built. Were it not for the strict criteria of what a
+syntactially correct mathematical expression is, the regex would not be
+required.
+
+Future point to consider is compressing the regex into a smaller
+pattern.
+
+This README contains everything from the **information gathering stage**,
 where the description of the program to be written is layed out by the
 reviewer followed by questions of the reviewee to identify edge-cases.
 
